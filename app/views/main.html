@@ -1,6 +1,8 @@
-<h1>Explore the news</h1>
+<h1 class="big-title">What interests you today?</h1>
 
-<div ng-repeat="topic in topics">
-  <h3><a ng-href="{{topic.link}}">{{topic.title}}</a></h3>
-  <img ng-src="{{topic.image}}">
+<div masonry preserve-order class="masonry row">
+  <div class="col-lg-6 row masonry-brick" ng-repeat="topic in topics">
+      <h1 class="mason-title"><a ng-href="{{topic.link}}">{{topic.title}}</a></h1>
+      <img class="col-lg-12 mason-image" ng-src="{{topic.image}}">
+  </div>
 </div>
