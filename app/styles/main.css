@@ -7,6 +7,13 @@ body {
   border: 2px solid transparent;
 }
 
+.news-reader {
+  background-color: #ecf0f1;
+  padding: 150px;
+  margin-bottom: 100px;
+  box-shadow: #161a1f 0 5px 15px;
+}
+
 
 .big-title {
   margin-top: 50px;
@@ -27,6 +34,31 @@ body {
   width: 50%;
 }
 
+.news-row {
+  padding-bottom: 20px;
+}
+
 .mason-title a {
   color: #f7f8ee;
 }
+
+.news-title {
+  margin-top: 30px;
+}
+.news-title a {
+  color: #2c3e50;
+}
+
+hr {
+  border-color: #2c3e50;
+}
+
+.news-author {
+  margin-top: 10px;
+  color: #1f1e1f;
+}
+.news-text {
+  margin-top: 30px;
+  color: #1f1e1f;
+}
+

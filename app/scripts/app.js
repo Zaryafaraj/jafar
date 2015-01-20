@@ -8,8 +8,11 @@
  *
  * Main module of the application.
  */
+angular.module('jafarApp.services', ['ngResource', 'ngRoute']);
+
 angular
   .module('jafarApp', [
+    'jafarApp.services',
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -26,7 +29,12 @@ angular
       })
       .when('/topics/:topicId', {
         templateUrl: 'views/topic.html',
-        controller: 'TopicCtrl'
+        controller: 'TopicCtrl',
+        resolve: {
+          topicNews : ['TopicLoader', function(TopicLoader) {
+            return new TopicLoader();
+          }]
+        }
       })
       .otherwise({
         redirectTo: '/'
