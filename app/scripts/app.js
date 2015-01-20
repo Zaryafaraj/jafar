@@ -23,6 +23,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/topics/:topicId', {
+        templateUrl: 'views/topic.html',
+        controller: 'TopicCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
