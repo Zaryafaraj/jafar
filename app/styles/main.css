@@ -10,7 +10,8 @@ body {
 
 .news-reader {
   background-color: #ecf0f1;
-  padding: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   margin-bottom: 100px;
   box-shadow: #161a1f 0 5px 15px;
 }
