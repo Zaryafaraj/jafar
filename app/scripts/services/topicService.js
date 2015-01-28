@@ -7,7 +7,7 @@
 var app = angular.module('jafarApp.services');
 
 app.factory('Topic', ['$resource', function($resource) {
-  return $resource('http://localhost:8000/categories/:topicId');
+  return $resource('http://localhost:8002/categories/:topicId');
 }]);
 
 app.factory('TopicLoader', ['Topic', '$route', '$q',
