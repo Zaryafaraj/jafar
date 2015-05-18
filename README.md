@@ -1,6 +1,6 @@
 # Jafar
 
-a simple news reader app for angularjs (zyring.com project)
+a simple news reader app for angularjs
 
 
 ![image](http://upload.wikimedia.org/wikipedia/en/a/a0/Jafar.jpg)
