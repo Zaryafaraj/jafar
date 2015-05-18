@@ -2,7 +2,6 @@
 
 a simple news reader app for angularjs (zyring.com project)
 
-For more info visit http://zyring.com
 
 ![image](http://upload.wikimedia.org/wikipedia/en/a/a0/Jafar.jpg)
 
