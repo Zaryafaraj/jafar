@@ -48,7 +48,9 @@ h5 {
 }
 .topic-img {
    height: 250px;
+    float: right;
 }
+
 .topic-title {
     padding: 10px;
     margin-bottom: 20px;
