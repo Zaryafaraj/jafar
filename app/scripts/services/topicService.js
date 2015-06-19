@@ -6,9 +6,15 @@
 
 var app = angular.module('jafarApp.services');
 
-app.factory('Topic', ['$resource', function($resource) {
-  return $resource('http://localhost:8002/categories/:topicId');
-}]);
+app.service( 'allTopicNews', ['$resource', function( $resource ) {
+  this.categories = $resource( 'http://localhost:8002/categories' );
+}] );
+
+app.service( 'topicNews', ['$resource', function( $resource ) {
+  this.topic = $resource('http://localhost:8002/categories/:topicId');
+}] );
+
+
 
 app.factory('TopicLoader', ['Topic', '$route', '$q',
   function(Apartment, $route, $q){

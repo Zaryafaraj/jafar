@@ -25,9 +25,9 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'AllTopicCtrl'
       })
-      .when('/topics/:topicId', {
+      .when('/categories/:topicId', {
         templateUrl: 'views/topic.html',
         controller: 'TopicCtrl',
         resolve: {

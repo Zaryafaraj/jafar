@@ -1,5 +1,140 @@
 <div class="container news-container">
-    <div class="row">
 
+    <!-- Design Topic-->
+    <div class="row topic-container">
+        <div class="topic-header">
+            <h5 class="topic-title">Design</h5>
+        </div>
+        <div class="col-sm-4 main-topic-box" ng-repeat="design in designTopic.items.slice(0,1)">
+            <div class="inner">
+                <a href="" class="topic-image-link">
+                    <img src="http://www.bloomberg.com/ss/06/03/monash/image/slide_1.jpg"
+                         class="img-responsive topic-img">
+
+                    <div class="overlay">
+                        <h4>{{design.title}}</h4>
+                        <span class="small white">{{design.author}} | {{design.published | date : format : timezone}}</span>
+                    </div>
+                </a>
+
+            </div>
+            <!--<img ng-src="{{design.thumbnail}}">-->
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-6 sub-topic-box"
+                     ng-repeat="design in designTopic.items.slice(1,3)">
+                    <div class="inner">
+
+                        <a href="">
+                            <div class="row">
+                                <div class="col-sm-4 image-sub-topic-box">
+                                    <img src="http://www.bloomberg.com/ss/06/03/monash/image/slide_1.jpg"
+                                         class="img-responsive">
+                                </div>
+                                <div class="col-sm-8 overlay-sub-topic">
+                                    <p class="title-sub-topic-box">{{design.title}}</p>
+                                    <span class="small">{{design.origin}} | {{design.published | date : format : timezone}}</span>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 sub-topic-box"
+                     ng-repeat="design in designTopic.items.slice(3,5)">
+                    <div class="inner">
+
+                        <a href="" class="">
+                            <div class="row">
+                                <div class="col-sm-4 image-sub-topic-box">
+                                    <img src="http://www.bloomberg.com/ss/06/03/monash/image/slide_1.jpg"
+                                         class="img-responsive">
+                                </div>
+                                <div class="col-sm-8 ">
+                                    <p class="title-sub-topic-box">{{design.title}}</p>
+                                    <span class="small">{{design.origin}} | {{design.published | date : format : timezone}}</span>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Gaming Topic-->
+    <div class="row topic-container">
+        <div class="topic-header">
+            <h5 class="topic-title">World News</h5>
+        </div>
+        <div class="col-sm-4 main-topic-box" ng-repeat="news in newsTopic.items.slice(0,1)">
+            <div class="inner">
+                <a href="" class="topic-image-link">
+                    <img src="http://www.bloomberg.com/ss/06/03/monash/image/slide_1.jpg"
+                         class="img-responsive topic-img">
+
+                    <div class="overlay">
+                        <h4>{{news.title}}</h4>
+                        <span class="small white">{{news.author}} | {{news.published | date : format : timezone}}</span>
+                    </div>
+                </a>
+
+            </div>
+            <!--<img ng-src="{{design.thumbnail}}">-->
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-6 sub-topic-box"
+                     ng-repeat="news in newsTopic.items.slice(1,3)">
+                    <div class="inner">
+
+                        <a href="">
+                            <div class="row">
+                                <div class="col-sm-4 image-sub-topic-box">
+                                    <img src="http://www.bloomberg.com/ss/06/03/monash/image/slide_1.jpg"
+                                         class="img-responsive">
+                                </div>
+                                <div class="col-sm-8 overlay-sub-topic">
+                                    <p class="title-sub-topic-box">{{news.title}}</p>
+                                    <span class="small">{{news.origin}} | {{news.published | date : format : timezone}}</span>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 sub-topic-box"
+                     ng-repeat="design in newsTopic.items.slice(3,5)">
+                    <div class="inner">
+
+                        <a href="" class="">
+                            <div class="row">
+                                <div class="col-sm-4 image-sub-topic-box">
+                                    <img src="http://www.bloomberg.com/ss/06/03/monash/image/slide_1.jpg"
+                                         class="img-responsive">
+                                </div>
+                                <div class="col-sm-8 ">
+                                    <p class="title-sub-topic-box">{{design.title}}</p>
+                                    <span class="small">{{design.origin}} | {{design.published | date : format : timezone}}</span>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
