@@ -7,15 +7,15 @@
         </div>
         <div class="col-sm-4 main-topic-box" ng-repeat="topicObj in topNews[topic].slice(0,1)">
             <div class="inner">
-                <a href="" class="topic-image-link">
+                <a ng-href="{{topicObj.link}}" class="topic-image-link">
                     <img ng-src="{{topicObj.thumbnail}}"
                          class="img-responsive topic-img">
 
-                    <div class="overlay">
-                        <!-- In case the title is too large cut only the first 50 chars-->
-                        <h4>{{topicObj.title.slice(0,50)}}</h4>
-                        <span class="small white">{{topicObj.author}} | {{topicObj.published | date : format : timezone}}</span>
-                    </div>
+                    <!--<div class="overlay">-->
+                        <!--&lt;!&ndash; In case the title is too large cut only the first 50 chars&ndash;&gt;-->
+                        <!--<h4>{{topicObj.title.slice(0,50)}}</h4>-->
+                        <!--<span class="small white">{{topicObj.author}} | {{topicObj.published | date : format : timezone}}</span>-->
+                    <!--</div>-->
                 </a>
 
             </div>
@@ -26,11 +26,11 @@
                      ng-repeat="topicObj in topNews[topic].slice(1,4)">
                     <div class="inner">
 
-                        <a href="">
+                        <a ng-href="{{topicObj.link}}">
                             <div class="row">
                                 <div class="col-sm-4 image-sub-topic-box">
                                     <img ng-src="{{topicObj.thumbnail}}"
-                                         class="img-responsive">
+                                         class="img-responsive sub-topic-img">
                                 </div>
                                 <div class="col-sm-8 overlay-sub-topic">
                                     <p class="title-sub-topic-box">{{topicObj.title.slice(0,50)}}</p>

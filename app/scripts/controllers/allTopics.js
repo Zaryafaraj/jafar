@@ -31,8 +31,11 @@ angular.module('jafarApp').controller('AllTopicCtrl',
                             //if we haven't filled up the headlines and the item has an author that is not unknown and the item has a unique thumbnail
                             //save it to headlines
                             if (res.length < 5 && item.author && item.author !== 'unknown' && item.thumbnail && item.thumbnail.toLowerCase() !== 'none' && !images[item.thumbnail]) {
-                                images[item.thumbnail] = true;
-                                res.push(item);
+                                if(item.link.indexOf('coolhunting') === -1 && item.link.indexOf(".") !== -1){
+                                    images[item.thumbnail] = true;
+                                    res.push(item);
+                                }
+
                             }
                         });
                         $scope.topNews[topic] = res;
