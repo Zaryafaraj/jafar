@@ -27,7 +27,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'AllTopicCtrl'
       })
-      .when('/categories/:topicId', {
+      .when('/topics/:topicId', {
         templateUrl: 'views/topic.html',
         controller: 'TopicCtrl',
         resolve: {

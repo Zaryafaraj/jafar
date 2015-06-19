@@ -16,14 +16,14 @@ app.service( 'topicNews', ['$resource', function( $resource ) {
 
 
 
-app.factory('TopicLoader', ['Topic', '$route', '$q',
-  function(Apartment, $route, $q){
+app.factory('TopicLoader', ['topicNews', '$route', '$q',
+  function(topicNews, $route, $q){
 
     //constructor function used in resolve
     return function() {
       var topicId = $route.current.params.topicId;
       var deferred = $q.defer();
-      Apartment.get({topicId: topicId},
+      topicNews.topic.get({topicId: topicId},
         function( topic ) {
           deferred.resolve( topic );
         }, function() {
