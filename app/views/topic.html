@@ -1,11 +1,30 @@
-<h1 class="big-title">News for {{topicTitle}}</h1>
+<div class="container news-container">
+    <h1 class="big-title">{{topicTitle}}</h1>
 
-<div class="masonry row news-reader">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 row news-row" ng-repeat="news in topicNews">
-    <hr>
-    <h4 class="news-title"> <a target="_blank" ng-href="{{news.link}}">{{news.title}}</a></h4>
-    <p class="news-author"><strong>{{news.author}} - {{news.origin}}</strong></p>
-    <p class="news-text" ng-show="news.summary && news.summary !== 'unkown'">{{news.summary.slice(0,500)}}</p>
-  </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4 sub-topic-box topic-page" ng-repeat="news in topicNews">
+            <div class="inner topic-page">
+                <a ng-href="{{news.link}}" target="_blank">
+                    <div class="row">
+                        <div class="col-sm-12 overlay-sub-topic">
+                            <p class="title-sub-topic-box topic-page">
+                                {{news.title}}</p>
+                            <p class="small">{{news.author}} | {{news.published | date : format : timezone}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<!--<div class="row news-reader sub-topic-box">-->
+<!--<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 row news-row" ng-repeat="news in topicNews">-->
+<!--<hr>-->
+<!--<h4 class="news-title"> <a target="_blank" ng-href="{{news.link}}">{{news.title}}</a></h4>-->
+<!--<p class="news-author"><strong>{{news.author}} - {{news.origin}}</strong></p>-->
+<!--<p class="news-text" ng-show="news.summary && news.summary !== 'unkown'">{{news.summary.slice(0,500)}}</p>-->
+<!--</div>-->
+<!--</div>-->
 

@@ -5,8 +5,8 @@
 'use strict';
 
 angular.module('jafarApp').controller('AllTopicCtrl',
-    ['$scope', '$routeParams', 'allTopicNews', 'topicNews',
-        function ($scope, $routeParams, allTopicNews, topicNews) {
+    ['$scope', '$routeParams', 'allTopicNews', 'topicNews', 'ImageServices',
+        function ($scope, $routeParams, allTopicNews, topicNews, ImageServices) {
 
 
             allTopicNews.categories.query().$promise.then(function (result) {
@@ -26,12 +26,11 @@ angular.module('jafarApp').controller('AllTopicCtrl',
                             }
                         });
                         $scope.topNews[topic] = res;
-                        console.log(topicNews.items);
                     });
 
                 });
 
             });
 
-            //$scope.topicImages = ImageServices.topicImages;
+            $scope.images = ImageServices.topicImages;
         }]);

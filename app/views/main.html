@@ -1,39 +1,51 @@
 <div class="container news-container">
+    <h1 class="big-title">Top News</h1>
 
     <!-- Design Topic-->
-    <div ng-repeat="topic in allTopicNews" ng-if="topNews[topic].length > 0" class="row topic-container">
+    <div ng-repeat="topic in allTopicNews" ng-if="topNews[topic].length > 0"
+         class="row topic-container">
         <div class="topic-header">
-            <h5 class="topic-title">{{topic}}</h5>
-        </div>
-        <div class="col-sm-3 main-topic-box" ng-repeat="topicObj in topNews[topic].slice(0,1)">
-            <div class="inner">
-                <a ng-href="{{topicObj.link}}" class="topic-image-link">
-                    <img ng-src="{{topicObj.thumbnail}}"
-                         class="img-responsive topic-img">
+            <h5 class="topic-title">{{topic}} <span><a ng-href="#/topics/{{topic}}"
+                                                       class="header-seemore">View more</a></span>
+            </h5>
 
-                    <!--<div class="overlay">-->
-                        <!--&lt;!&ndash; In case the title is too large cut only the first 50 chars&ndash;&gt;-->
-                        <!--<h4>{{topicObj.title.slice(0,50)}}</h4>-->
-                        <!--<span class="small white">{{topicObj.author}} | {{topicObj.published | date : format : timezone}}</span>-->
-                    <!--</div>-->
+        </div>
+        <div class="col-sm-5 col-lg-3 main-topic-box"
+             ng-repeat="topicObj in topNews[topic].slice(0,1)">
+            <div class="inner">
+                <a ng-href="{{topicObj.link}}" target="_blank" class="topic-image-link">
+                    <div class="img-holder">
+                        <img ng-src="{{images[topic][0]}}"
+                             class="topic-img">
+
+                        <div class="overlay">
+                            <!-- In case the title is too large cut only the first 50 chars-->
+                            <h4>{{topicObj.title.slice(0,50)}}</h4>
+                            <span class="small white">{{topicObj.author}} | {{topicObj.published | date : format : timezone}}</span>
+                        </div>
+                    </div>
                 </a>
+
+
+            </div>
+            <div class="row text-right seemore visible-xs">
 
             </div>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-7 col-lg-9 hidden-xs">
             <div class="row">
-                <div class="col-sm-6 sub-topic-box"
+                <div class="col-sm-12 col-lg-6 sub-topic-box"
                      ng-repeat="topicObj in topNews[topic].slice(1,5)">
                     <div class="inner">
-
-                        <a ng-href="{{topicObj.link}}">
+                        <a ng-href="{{topicObj.link}}" target="_blank">
                             <div class="row">
                                 <div class="col-sm-4 image-sub-topic-box">
-                                    <img ng-src="{{topicObj.thumbnail}}"
+                                    <img ng-src="{{images[topic][$index + 1]}}"
                                          class="img-responsive sub-topic-img">
                                 </div>
                                 <div class="col-sm-8 overlay-sub-topic">
-                                    <p class="title-sub-topic-box">{{topicObj.title.slice(0,50)}}</p>
+                                    <p class="title-sub-topic-box">
+                                        {{topicObj.title.slice(0,50)}}</p>
                                     <span class="small">{{topicObj.origin}} | {{topicObj.published | date : format : timezone}}</span>
                                 </div>
                             </div>
@@ -43,7 +55,6 @@
                     </div>
                 </div>
             </div>
-            <a ng-href="#/topics/{{topic}}">See more</a>
         </div>
     </div>
 

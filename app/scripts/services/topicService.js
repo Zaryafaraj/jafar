@@ -7,11 +7,11 @@
 var app = angular.module('jafarApp.services');
 
 app.service( 'allTopicNews', ['$resource', function( $resource ) {
-  this.categories = $resource( 'http://localhost:8002/categories' );
+  this.categories = $resource( 'http://farnsworth.zyring.com/categories' );
 }] );
 
 app.service( 'topicNews', ['$resource', function( $resource ) {
-  this.topic = $resource('http://localhost:8002/categories/:topicId');
+  this.topic = $resource('http://farnsworth.zyring.com/categories/:topicId');
 }] );
 
 
