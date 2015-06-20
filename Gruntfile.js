@@ -307,6 +307,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
+            'templates/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -402,7 +403,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
+    //'test',
     'build'
   ]);
 };
